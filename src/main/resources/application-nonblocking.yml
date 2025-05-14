@@ -1,0 +1,11 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/tradesdb
+    username: postgres
+    password: secret
+
+spring.kafka:
+  bootstrap-servers: localhost:9092
+  consumer:
+    group-id: reactive-trade-consumer
+    auto-offset-reset: earliest

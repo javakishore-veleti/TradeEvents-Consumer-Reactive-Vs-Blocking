@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: trade-events-consumer
+  profiles:
+    active: blocking  # Change to nonblocking when needed
+
+server:
+  port: 8080
