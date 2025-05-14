@@ -1,3 +1,15 @@
+
+
+mvn archetype:generate \
+-DarchetypeGroupId=io.gatling \
+-DarchetypeArtifactId=gatling-maven-archetype-highcharts \
+-DarchetypeVersion=3.10.3 \
+-DgroupId=com.jk.apps.gatling \
+-DartifactId=gatling-loadtest \
+-Dversion=1.0.0 \
+-DinteractiveMode=false
+
+
 # Read Me First
 The following was discovered as part of building this project:
 

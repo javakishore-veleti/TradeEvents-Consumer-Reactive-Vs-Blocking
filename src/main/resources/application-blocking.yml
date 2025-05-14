@@ -14,3 +14,9 @@ spring.kafka:
   consumer:
     group-id: blocking-trade-consumer
     auto-offset-reset: earliest
+
+springdoc:
+  api-docs:
+    path: /api/blocking-docs
+  swagger-ui:
+    path: /swagger-ui-blocking.html

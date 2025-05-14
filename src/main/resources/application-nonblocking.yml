@@ -9,3 +9,9 @@ spring.kafka:
   consumer:
     group-id: reactive-trade-consumer
     auto-offset-reset: earliest
+
+springdoc:
+  api-docs:
+    path: /api/reactive-docs
+  swagger-ui:
+    path: /swagger-ui-reactive.html
