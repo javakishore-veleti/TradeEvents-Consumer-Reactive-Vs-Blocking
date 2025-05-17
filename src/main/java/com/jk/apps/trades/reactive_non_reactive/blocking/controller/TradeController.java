@@ -3,6 +3,7 @@ package com.jk.apps.trades.reactive_non_reactive.blocking.controller;
 import com.jk.apps.trades.reactive_non_reactive.common.entity.TradeEvent;
 import com.jk.apps.trades.reactive_non_reactive.common.service.TradeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +16,7 @@ public class TradeController {
     private final TradeService tradeService;
 
     @Autowired
-    public TradeController(TradeService tradeService) {
+    public TradeController(@Qualifier("blockingTradeService") TradeService tradeService) {
         this.tradeService = tradeService;
     }
 

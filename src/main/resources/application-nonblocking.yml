@@ -1,8 +1,8 @@
 spring:
   r2dbc:
-    url: r2dbc:postgresql://localhost:5432/tradesdb
+    url: r2dbc:postgresql://localhost:5432/tradedb
     username: postgres
-    password: secret
+    password: admin
 
 spring.kafka:
   bootstrap-servers: localhost:9092

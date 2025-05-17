@@ -4,11 +4,12 @@ import com.jk.apps.trades.reactive_non_reactive.common.entity.TradeEvent;
 import com.jk.apps.trades.reactive_non_reactive.common.service.TradeService;
 import com.jk.apps.trades.reactive_non_reactive.nonblocking.repository.ReactiveTradeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
-import reactor.core.publisher.Mono;
 
-@Service
+@Profile("nonblocking")
+@Service("reactiveTradeService")
 public class ReactiveTradeServiceImpl implements TradeService {
 
     private final ReactiveTradeRepository tradeRepository;

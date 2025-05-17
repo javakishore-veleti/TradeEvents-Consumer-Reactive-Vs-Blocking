@@ -5,6 +5,7 @@ import com.jk.apps.trades.reactive_non_reactive.common.entity.TradeEvent;
 import com.jk.apps.trades.reactive_non_reactive.common.service.TradeService;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
@@ -15,7 +16,7 @@ public class TradeEventKafkaConsumer {
     private final ObjectMapper objectMapper;
 
     @Autowired
-    public TradeEventKafkaConsumer(TradeService tradeService, ObjectMapper objectMapper) {
+    public TradeEventKafkaConsumer(@Qualifier("blockingTradeService") TradeService tradeService, ObjectMapper objectMapper) {
         this.tradeService = tradeService;
         this.objectMapper = objectMapper;
     }

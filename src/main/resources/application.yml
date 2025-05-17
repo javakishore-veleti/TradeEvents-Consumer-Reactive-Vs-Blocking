@@ -3,6 +3,26 @@ spring:
     name: trade-events-consumer
   profiles:
     active: blocking  # Change to nonblocking when needed
+  datasource:
+    url: jdbc:postgresql://localhost:5432/tradedb
+    username: postgres
+    password: admin
+  main:
+    allow-bean-definition-overriding: true
+  liquibase:
+    change-log: classpath:/db/changelog/db.changelog-master.yaml
+    enabled: true
+    drop-first: false
+    default-schema: public
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
 
 server:
   port: 8080
+
+logging:
+  level:
+    org.springframework: INFO
